@@ -1,0 +1,35 @@
+﻿<Window x:Class="PR5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PR5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="350">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <Label Content="Первое положительное число"/>
+            <TextBox x:Name="tbOnePositiveNumber" Text=""/>
+            <Label Content="Второе положительное число"/>
+            <TextBox x:Name="tbTwoPositiveNumber" Text=""/>
+            <Label Content="Третье положительное число"/>
+            <TextBox x:Name="tbThreePositiveNumber" Text=""/>
+            <Label Content="Результат"/>
+            <TextBox x:Name="tbCalculater" Text=""/>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="btInfo" Content="О программе" Margin="5" Click="btInfo_Click"/>
+            <Button x:Name="btCalculater" Content="Расчитать" Margin="5" Click="btCalculater_Click"/>
+            <Button x:Name="btExit" Content="Выход" Margin="5" Click="btExit_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
