@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace TriardClass
 {
@@ -21,6 +22,8 @@ namespace TriardClass
             set
             {
                 if (value > 0) onePositiveNumber = value;
+                else MessageBox.Show("В первом числе меньше нуля");
+
             }
         }
         public int TwoPositiveNumber
@@ -32,6 +35,7 @@ namespace TriardClass
             set
             {
                 if (value > 0) twoPositiveNumber = value;
+                else MessageBox.Show("Во втором числе меньше нуля");
             }
         }
         public int ThreePositiveNumber
@@ -43,6 +47,7 @@ namespace TriardClass
             set
             {
                 if (value > 0) threePositiveNumber = value;
+                else MessageBox.Show("В третьем числе меньше нуля");
             }
         }
         public int SumNumber()

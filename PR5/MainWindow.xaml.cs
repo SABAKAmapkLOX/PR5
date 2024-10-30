@@ -28,27 +28,12 @@ namespace PR5
             bool boolOnePositiveNumber = int.TryParse(tbOnePositiveNumber.Text, out int oneNumber);
             bool boolTwoPositiveNumber = int.TryParse(tbTwoPositiveNumber.Text, out int twoNumber);
             bool boolThreePositiveNumber = int.TryParse(tbThreePositiveNumber.Text, out int threeNumber);
-            if(boolOnePositiveNumber == true && boolTwoPositiveNumber == true && boolThreePositiveNumber == true)
+            if(boolOnePositiveNumber == true || boolTwoPositiveNumber == true || boolThreePositiveNumber == true)
             {
                 int onePositiveNumber = Convert.ToInt32(oneNumber);
                 int twoPositiveNumber = Convert.ToInt32(twoNumber);
                 int threePositivenumber = Convert.ToInt32(threeNumber);
                 triard.SetParams(onePositiveNumber,twoPositiveNumber,threePositivenumber);
-                int Sum = triard.SumNumber();
-                tbCalculater.Text = Convert.ToString(Sum);
-            }
-            else if (boolOnePositiveNumber == true && boolTwoPositiveNumber == true)
-            {
-                int onePositiveNumber = Convert.ToInt32(oneNumber);
-                int twoPositiveNumber = Convert.ToInt32(twoNumber);
-                triard.SetParams(onePositiveNumber, twoPositiveNumber);
-                int Sum = triard.SumNumber();
-                tbCalculater.Text = Convert.ToString(Sum);
-            }
-            else if (boolOnePositiveNumber == true)
-            {
-                int onePositiveNumber = Convert.ToInt32(oneNumber);
-                triard.SetParams(onePositiveNumber);
                 int Sum = triard.SumNumber();
                 tbCalculater.Text = Convert.ToString(Sum);
             }
